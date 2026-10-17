@@ -28,6 +28,9 @@ git clone https://github.com/spring4ever/android_vendor_qcom_opensource_data-ipa
 ln -sf ../common/os_pickup_qssi.bp hardware/qcom-caf/sm6375-6.1/Android.bp
 git clone https://github.com/suchit-7x/vendor_lineage-priv_keys -b evolution vendor/evolution-priv/keys
 
+git clone https://github.com/swiitch-OFF-Lab/hardware_dolby -b sony-A17 hardware/dolby
+git clone https://github.com/swiitch-OFF-Lab/packages_apps_DolbyUI -b 16.0 packages/apps/DolbyUI
+
 echo "Setup environment!..."
 source build/envsetup.sh
 
