@@ -46,15 +46,7 @@ m bacon -j$(nproc --all);
 
 echo "Upload to GoFile will be started..."
 
-ZIP=$(find out/target/product/flame -maxdepth 1 -type f -name "*.zip" | head -n 1)
+wget -q -O upload.sh https://raw.githubusercontent.com/SiliconxLab/scripts/refs/heads/main/upload.sh
+chmod +x upload.sh
+./upload.sh flame
 
-if [ -n "$ZIP" ]; then
-    echo "Uploading $ZIP..."
-    wget https://raw.githubusercontent.com/lordgaruda/GoFile-Upload/refs/heads/master/upload.sh
-    chmod +x upload.sh
-    ./upload.sh "$ZIP"
-    ./upload.sh out/target/product/flame/Pro*flame*.json
-else
-    echo "No ROM ZIP found!"
-    exit 1
-fi
