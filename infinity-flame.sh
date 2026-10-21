@@ -25,7 +25,7 @@ sudo apt-get update && sudo apt-get install patchelf coreutils -y;
 rm -rf build/soong/fsgen;
 
 rm -rf packages/apps/Updater
-git clone https://github.com/SiliconxLab/packages_apps_Updater packages/apps/Updater
+git clone https://github.com/SiliconxLab/packages_apps_Updater -b infinity packages/apps/Updater
 git clone https://github.com/suchit-7x/vendor_lineage-priv_keys -b infinity vendor/infinity-priv/keys
 
 echo "Setup environment!..."
