@@ -47,7 +47,7 @@ add_json() {
         elif [[ "$(jq -r .status <<<"$resp")" != "ok" ]]; then
             echo "Upload failed: $f" >&2
         fi
-    done < <(find "$OUT" -maxdepth 1 -type f -name "*.json" | sort)
+        done < <(find "$OUT" -maxdepth 1 -type f -name "*.json" ! -name "installed-files*.json" ! -name "module-info.json" | sort)
     [[ -n "$link" ]] && button "Download JSON" "$link"
 }
 
